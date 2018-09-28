@@ -1,0 +1,257 @@
+
+$hand: url('../images/hand.cur'), pointer
+
+* 
+	margin: 0
+	padding: 0
+	font-family: Roboto, sans-serif
+
+body 
+
+	.wrapper, header, footer, .slider, .slider-nav, .articles, .contact-form 
+		width: 100%
+	
+	.wrapper 
+		position: relative
+	
+		header
+			background-color: #00a1d1
+			border-radius: 2px
+
+			.mobile-nav 
+				display: none 
+				.mobile-menu
+					display: none
+					cursor: $hand
+					float: right
+			&::after
+				clear: both
+				content: ""
+				display: table
+
+			.logo
+				margin: 23px auto 22px 38px
+				float: left
+
+				img
+					vertical-align: top
+
+			.nav-wrapper
+				max-width: 880px
+				float: right
+				display: block
+
+				.mobile-close
+					display: none
+					float: right
+
+					img
+						cursor: $hand
+				
+				nav
+					ul
+						list-style-type: none
+						z-index: 1
+
+						li
+							display: inline-block
+							position: relative
+							padding: 23px 37px 25px 28px
+							cursor: $hand
+
+							&:hover
+								background-color: #008ab3
+
+								> ul
+									visibility: visible
+									opacity: 1
+
+							> ul
+								visibility: hidden
+								opacity: 0
+								position: absolute
+								top: 75px
+								right: 0px
+								padding: 13px 0px 12px 0px
+								text-align: right
+								width: 254px
+								background-color: #333333
+								
+
+								li
+									display: block
+									padding: 0 26px 0 0
+									font-size: 18px
+									color: #ffffff
+									line-height: 36px
+
+							a
+								text-decoration: none
+								font-size: 22px
+								color: #ffffff
+								cursor: $hand
+
+		.slider
+			position: relative
+			height: 250px
+			background:
+				image: url('../images/slide.png')
+				size: cover
+				repeat: no-repeat
+				position: center
+
+			h1
+				max-width: 540px
+				font:
+					size: 50px
+					weight: bold
+				color: #ffffff
+				line-height: 36px
+				margin: auto
+				padding: 107px 5px 0px 5px
+
+			.slider-nav
+				position: absolute
+				text-align: center
+				bottom: 17px
+
+				span
+					background-color: #ffffff
+					height: 15px
+					width: 15px
+					border-radius: 50%
+					display: inline-block
+					margin-right: 15px
+					cursor: $hand
+
+					&.active
+						background-color: #008ab3
+
+		.articles
+			.articles-wrapper
+				columns: 3
+				padding: 30px 10px
+
+				.articles-template
+					display: none
+
+				article
+					max-width: 650px
+					padding: 0
+
+					img
+						max-width: 100%
+						height: auto
+
+					h2
+						font:
+							size: 40px
+							weight: bold
+						color: #4a4a4a
+						line-height: 44px
+
+					p
+						font-size: 22px
+						color: #747474
+						line-height: 34px
+						margin-top: 11px
+						margin-bottom: 8px
+
+					a
+						display: inline-block
+						font:
+							size: 22px
+							weight: bold
+						color: #00a1d1
+						line-height: 34px
+						text-decoration: none
+						margin-bottom: 50px
+						cursor: $hand
+
+
+			.load-button
+				text-align: center
+				padding: 0px 10px 50px 10px
+
+				button
+					width: 320px
+					height: 60px
+					background: #b0b0b0
+					border-radius: 4px
+					border: none
+					font-size: 22px
+					color: #ffffff
+					line-height: 36px
+					cursor: $hand
+
+
+		.contact-form
+			background-color: #e9e9e9
+
+			h1
+				font-size: 50px
+				color: #4a4a4a
+				line-height: 36px
+				text-align: center
+				padding-top: 60px
+
+			.form-wrapper
+				max-width: 500px
+				padding: 40px 0px
+				margin: 0 auto
+
+				label, span, input, input[type="submit"], textarea
+					display: block
+
+				label, input
+					line-height: 36px
+					font-size: 22px
+					color: #4a4a4a
+
+				label
+					margin: 20px 0px 8px 0px
+
+				input, textarea
+					background-color: #ffffff
+					border-radius: 4px
+					width: 100%
+					border: none
+					outline-color: #00a1d1
+					cursor: $hand
+					text-indent: 25px
+
+				textarea
+					resize: none
+					overflow: hidden
+					padding-top: 12px
+
+				input
+					height: 80px
+					font-weight: bold
+
+					&[type="submit"]
+						background-color: #00a1d1
+						height: 80px
+						padding: 0px
+						color: #ffffff
+						margin: 20px auto
+
+		footer
+			height: 70px
+			background-color: #4a4a4a
+			border-radius: 2px
+			margin: auto
+
+			.left, .right
+				font-size: 16px
+				color: #ffffff
+				line-height: 36px
+				text-align: center
+				margin-top: 18px
+
+			.left
+				padding-left: 9px
+				float: left
+			.right
+				padding-right: 9px
+				float: right
